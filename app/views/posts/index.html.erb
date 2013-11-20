@@ -1,7 +1,9 @@
 <h1>Ivan the Terrible's Blog</h1>
 
+<%= will_paginate @posts %>
+
 <section class="blog">
-  <%= render @posts %>
+  <%= render @posts.page(params[:page]).per_page(10) %>
 </section>
 
 <br />
