@@ -10,6 +10,11 @@
   <%= @post.body %>
 </p>
 
+<p>
+  <b>Comments:</b>
+</p>
+<%= will_paginate @comments %>
+<%= render @comments.page(params[:page]).per_page(10) %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
